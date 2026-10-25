@@ -1,0 +1,62 @@
+{
+  "name": "dsh-pdf-toolbox",
+  "version": "1.0.0",
+  "description": "PDF 结构操作 DSH 插件（9 个工具覆盖 14 项操作）：合并/拆分/压缩/加水印/提取-删除-旋转-插入页面/元数据/加密检测/文本提取/文档信息。纯本地，无 API key，无上传。",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "pdf",
+    "merge",
+    "split",
+    "compress",
+    "watermark",
+    "ocr",
+    "convert"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glentao-dev/dsh-pdf-toolbox.git"
+  },
+  "homepage": "https://github.com/glentao-dev/dsh-pdf-toolbox#readme",
+  "bugs": {
+    "url": "https://github.com/glentao-dev/dsh-pdf-toolbox/issues"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "~3.18.5",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^4.10.38"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.5",
+    "@deepseek-ai/dsh-tools": "0.2.1-rc.3"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "~4.0.5",
+    "@deepseek-ai/dsh-tools": "0.2.1-rc.3",
+    "@types/node": "^22.10.2",
+    "typescript": "^5.9.0"
+  }
+}

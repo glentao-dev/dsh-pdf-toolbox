@@ -1,0 +1,6 @@
+# DSH plugin entry for dsh-pdf-toolbox
+# Installed into a profile's package.json bundles, this patch inserts the plugin
+# into that profile's loader tree (cordis patch semantics require insert for new entries).
+- insert:
+    - id: dsh-pdf-toolbox
+      name: dsh-pdf-toolbox

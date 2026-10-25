@@ -1,0 +1,14 @@
+# DSH plugin ignore (类似 .gitignore)
+node_modules/
+lib/
+.dsh/
+*.log
+npm-debug.log*
+yarn-error.log*
+.pnp.*
+coverage/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
